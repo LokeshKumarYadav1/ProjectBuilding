@@ -13,7 +13,7 @@ public class MyController {
     @Autowired
     private Myservice getAllRecord;
    @GetMapping("/view")
-   public List<Records> GetCourse(){
+   public List<Records> GetRecord(){
        return this.getAllRecord.GetRecord();
    }
 
