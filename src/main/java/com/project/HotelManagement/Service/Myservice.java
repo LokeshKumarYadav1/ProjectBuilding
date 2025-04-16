@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface Myservice {
    public List<Records> GetRecord();
-   public Records GetRecord(String cust);
+   public Records GetRecord(String customer);
 }
