@@ -1,20 +1,30 @@
 package com.project.HotelManagement.MyEntity;
 
-public class Records {
-    int RoomNo;
-    String Customer;
-    String Address;
-    Boolean Equipped;
-    String ChequeIn;
-    String ChequeOut;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-    public Records(int roomNo, String customer, String address, Boolean equipped, String chequeIn, String chequeOut) {
+@Entity
+public class HotelRecords {
+    public int RoomNo;
+    @Id
+    private String Customer;
+    private String Address;
+    private Boolean Equipped;
+    private String ChequeIn;
+    private String ChequeOut;
+
+    public HotelRecords(int roomNo, String customer, String address, Boolean equipped, String chequeIn, String chequeOut) {
         RoomNo = roomNo;
         Customer = customer;
         Address = address;
         Equipped = equipped;
         ChequeIn = chequeIn;
         ChequeOut = chequeOut;
+    }
+
+    public HotelRecords()
+    {
+
     }
 
     public int getRoomNo() {
