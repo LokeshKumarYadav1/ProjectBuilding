@@ -1,7 +1,7 @@
-package com.project.HotelManagement.Controller;
+package com.project.HotelManagement.controller;
 
 import com.project.HotelManagement.entity.HotelRecords;
-import com.project.HotelManagement.services.service;
+import com.project.HotelManagement.services.RecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 public class RecordController {
     @Autowired
-    private service getAllRecord;
+    private RecordService getAllRecord;
     private Object ResponseEntity;
 
     // To get all RECORD
@@ -38,14 +38,14 @@ public class RecordController {
    @PutMapping("/view")
     public HotelRecords UpdateRecord(@RequestBody HotelRecords record)
    {
-       return this.getAllRecord.UpdateRecord(record);
+       return this.getAllRecord.updateRecord(record);
    }
 
    @DeleteMapping("/view/{customer}")
-    public ResponseEntity<HttpStatus> DeleteRecord(@PathVariable String customer)
+    public ResponseEntity<HttpStatus> deleteRecord(@PathVariable String customer)
    {
        try{
-           this.getAllRecord.DeleteRecord(customer);
+           this.getAllRecord.deleteRecord(customer);
            return new ResponseEntity<>(HttpStatus.OK);
        }catch (Exception e){
            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

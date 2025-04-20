@@ -1,14 +1,13 @@
 package com.project.HotelManagement.services;
 
 import com.project.HotelManagement.entity.HotelRecords;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
-@Service
-public interface service {
+@org.springframework.stereotype.Service
+public interface RecordService {
    public List<HotelRecords> getRecords();
    public HotelRecords getRecords(String customer);
    public HotelRecords AddRecord(HotelRecords record);
-   public HotelRecords UpdateRecord(HotelRecords record);
-   public void DeleteRecord(String customer);
+   public HotelRecords updateRecord(HotelRecords record);
+   public void deleteRecord(String customer);
 }

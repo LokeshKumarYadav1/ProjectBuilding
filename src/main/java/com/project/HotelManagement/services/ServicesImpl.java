@@ -3,19 +3,18 @@ package com.project.HotelManagement.services;
 import com.project.HotelManagement.entity.HotelRecords;
 import com.project.HotelManagement.dao.RecordDAO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class servicesImple implements service {
+@org.springframework.stereotype.Service
+public class ServicesImpl implements RecordService {
 
     @Autowired
     private RecordDAO recordDao;
 
    // List<Records> list;
     //@Autowired
-    public servicesImple()
+    public ServicesImpl()
     {
 //        list = new ArrayList<>();
 //        list.add(new Records(101, "Ram", "Delhi", true, "14 April 2025 (22:30 Hrs)", "15 April 2025 (10:00 Hrs)"));
@@ -53,7 +52,7 @@ public class servicesImple implements service {
     }
 
     @Override
-    public HotelRecords UpdateRecord(HotelRecords record) {
+    public HotelRecords updateRecord(HotelRecords record) {
 //        list.forEach(e -> {
 //            if (e.getCustomer().equals(record.getCustomer())){
 //                e.setChequeOut(record.getChequeOut());
@@ -66,7 +65,7 @@ public class servicesImple implements service {
     }
 
     @Override
-    public void DeleteRecord(String customer) {
+    public void deleteRecord(String customer) {
        //list = this.list.stream().filter(e-> Boolean.parseBoolean(e.getCustomer())).collect(Collectors.toList());
        HotelRecords entity = recordDao.getOne(customer);
        recordDao.delete(entity);
