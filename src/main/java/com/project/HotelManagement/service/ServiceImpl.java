@@ -1,13 +1,11 @@
-package com.project.HotelManagement.Service;
+package com.project.HotelManagement.service;
 
-import com.project.HotelManagement.MyEntity.HotelRecords;
+import com.project.HotelManagement.entity.HotelRecords;
 import com.project.HotelManagement.dao.RecordDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ServiceImpl implements Myservice{
@@ -24,18 +22,18 @@ public class ServiceImpl implements Myservice{
 //        list.add(new Records(102, "Shyam", "Pune", true, "14 April 2025 (12:15 Hrs)", "15 April 2025 (10:00 Hrs)"));
     }
     @Override
-    public List<HotelRecords> GetRecord() {
+    public List<HotelRecords> getRecords() {
         //return list;
 
         return recordDao.findAll();
     }
 
     @Override
-    public HotelRecords GetRecord(String custName) {
+    public HotelRecords getRecords(String customerName) {
 //        Records rec = null;
 //        for (Records temp : list)
 //        {
-//            if (temp.getCustomer().equals(cust))
+//            if (temp.getCustomer().equals(customerName))
 //            {
 //                rec = temp;
 //                break;
@@ -43,7 +41,7 @@ public class ServiceImpl implements Myservice{
 //        }
 //        return rec;
 
-        return recordDao.getOne(custName);
+        return recordDao.getOne(customerName);
     }
 
     @Override

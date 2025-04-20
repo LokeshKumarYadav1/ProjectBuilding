@@ -1,7 +1,7 @@
-package com.project.HotelManagement.controller;
+package com.project.HotelManagement.RecordController;
 
-import com.project.HotelManagement.MyEntity.HotelRecords;
-import com.project.HotelManagement.Service.Myservice;
+import com.project.HotelManagement.entity.HotelRecords;
+import com.project.HotelManagement.service.Myservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,15 +17,15 @@ public class MyController {
 
     // To get all RECORD
    @GetMapping("/view")
-   public List<HotelRecords> GetRecord(){
-       return this.getAllRecord.GetRecord();
+   public List<HotelRecords> getRecords(){
+       return this.getAllRecord.getRecords();
    }
 
    // To get single RECORD
    @GetMapping("/view/{customer}")
-    public HotelRecords GetRecord(@PathVariable String customer)
+    public HotelRecords getRecords(@PathVariable String customerName)
    {
-       return getAllRecord.GetRecord(customer);
+       return getAllRecord.getRecords(customerName);
    }
 
    // To Add Record

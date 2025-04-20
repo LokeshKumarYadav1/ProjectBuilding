@@ -1,4 +1,4 @@
-package com.project.HotelManagement.MyEntity;
+package com.project.HotelManagement.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
