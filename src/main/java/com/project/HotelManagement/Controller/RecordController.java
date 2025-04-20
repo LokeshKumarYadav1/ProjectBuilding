@@ -1,7 +1,7 @@
-package com.project.HotelManagement.RecordController;
+package com.project.HotelManagement.Controller;
 
 import com.project.HotelManagement.entity.HotelRecords;
-import com.project.HotelManagement.service.Myservice;
+import com.project.HotelManagement.services.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class MyController {
+public class RecordController {
     @Autowired
-    private Myservice getAllRecord;
+    private service getAllRecord;
     private Object ResponseEntity;
 
     // To get all RECORD

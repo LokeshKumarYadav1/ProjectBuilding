@@ -1,4 +1,4 @@
-package com.project.HotelManagement.service;
+package com.project.HotelManagement.services;
 
 import com.project.HotelManagement.entity.HotelRecords;
 import com.project.HotelManagement.dao.RecordDAO;
@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ServiceImpl implements Myservice{
+public class servicesImple implements service {
 
     @Autowired
     private RecordDAO recordDao;
 
    // List<Records> list;
     //@Autowired
-    public ServiceImpl()
+    public servicesImple()
     {
 //        list = new ArrayList<>();
 //        list.add(new Records(101, "Ram", "Delhi", true, "14 April 2025 (22:30 Hrs)", "15 April 2025 (10:00 Hrs)"));
